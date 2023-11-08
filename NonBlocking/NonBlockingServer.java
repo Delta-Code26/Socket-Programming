@@ -40,7 +40,7 @@ public class NonBlockingServer {
 
                         if (bytesRead == -1) {
                             clientChannel.close();
-                            System.out.println("Client disconnected: " + clientChannel);
+                            System.out.println("Client Terputus: " + clientChannel);
                             break;
                         }
 
@@ -48,11 +48,11 @@ public class NonBlockingServer {
                         byte[] receivedData = new byte[buffer.remaining()];
                         buffer.get(receivedData);
                         String receivedMessage = new String(receivedData);
-                        System.out.println("Received from client " + clientChannel + ": " + receivedMessage);
+                        System.out.println("Pesan Baru  " + clientChannel + ": " + receivedMessage);
 
                         // Handle server response here (echo back to the client)
                         buffer.clear();
-                        buffer.put(("Server received: " + receivedMessage).getBytes());
+                        buffer.put(("Server Diterima: " + receivedMessage).getBytes());
                         buffer.flip();
                         clientChannel.write(buffer);
                     }
