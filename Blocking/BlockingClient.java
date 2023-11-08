@@ -14,7 +14,7 @@ public class BlockingClient {
              BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in))) {
 
-            System.out.println("Connected to server. Type your message:");
+            System.out.println("Connected to server. Kirim Pesan :");
 
             String userInput;
             while ((userInput = stdIn.readLine()) != null) {
