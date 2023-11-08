@@ -15,7 +15,7 @@ public class NonBlockingClient {
             socketChannel.connect(new InetSocketAddress(SERVER_ADDRESS, SERVER_PORT));
             socketChannel.configureBlocking(false);
 
-            System.out.println("Connected to server. Type your message:");
+            System.out.println("Connected to server. Kirim Pesan :");
 
             ByteBuffer buffer = ByteBuffer.allocate(1024);
             BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
