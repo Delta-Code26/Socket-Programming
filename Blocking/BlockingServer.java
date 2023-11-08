@@ -45,13 +45,13 @@ public class BlockingServer {
             try {
                 String input;
                 while ((input = in.readLine()) != null) {
-                    System.out.println("Received from client: " + input);
+                    System.out.println("Pesan Dari Client: " + input);
                     for (PrintWriter client : clients) {
                         client.println("Client " + clientSocket + ": " + input);
                     }
                 }
             } catch (IOException e) {
-                System.out.println("Client disconnected: " + clientSocket);
+                System.out.println("Client Terputus: " + clientSocket);
                 clients.remove(out);
                 try {
                     clientSocket.close();
